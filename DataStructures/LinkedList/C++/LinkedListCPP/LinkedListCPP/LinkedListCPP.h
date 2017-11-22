@@ -6,12 +6,8 @@
 #define LINKEDLIST_H
 
 
-struct Node
-{
-	int data;
-	Node *next;
+struct Node;
 
-};
 class LinkedList
 {
 public:
@@ -32,10 +28,10 @@ public:
 	*/
 
 	//adding elements
-	void add( int index, int data );
-	void add( int data );
-	void addFirst( int data );
-	void addLast( int data );
+	Node* add( int index, int data );
+	Node* add( int data );
+	Node* addFirst( int data );
+	Node* addLast( int data );
 
 	//removing elements
 	void removeData( int data );
@@ -55,6 +51,7 @@ public:
 	int indexOf( int data );
 	int lastIndexOf(int data); 
 	int sizeOf();
+	void printList();
 
 	//rearranging
 	Node* toArray();
